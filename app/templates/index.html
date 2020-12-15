@@ -1,0 +1,14 @@
+{% extends 'base.html'%}
+{% block content %}
+<h3 style="font-size: 70px; font-family: 'Charm', cursive;  padding-top: 70px; padding-bottom:70px; text-align: center;" class="text-default">Welcome to my blog, here are some of the inspiration quotes that contain wisdom.</h3>
+<p style="font-size: 30px; font-family: 'Charm', cursive;text-align: center;" >(Refresh the page to view other quotes)</p>
+<hr>
+<div style="font-size: 30px; font-family: 'Merienda', cursive;  padding-top: 40px; text-align: center;">
+    {% for quote in getquotes %}
+    <p>{{quote.quote}}</p>
+    <p class="text-danger"> By: {{quote.author}}</p>
+    {% endfor %}
+
+</div>
+
+{% endblock %}
